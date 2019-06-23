@@ -1,0 +1,100 @@
+@font-face {
+  font-family: Lato Light;
+  src: url("./Lato-Light.ttf");
+}
+.loginAPP {
+  flex: 1;
+  flex-direction: row-reverse;
+  height:100vh;
+}
+.buttons{
+  display: inline;
+  text-align: center;
+}
+@media(min-width: 1200px){
+  .loginWrapper {
+  width: 50%;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3665d206-7d64-46f2-978a-eec02f6a9436/d9c5l9w-06591461-498a-4a8d-a6f9-215043fe9edb.jpg/v1/fill/w_1071,h_746,q_70,strp/the_archivist_by_juliedillon_d9c5l9w-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODM2IiwicGF0aCI6IlwvZlwvMzY2NWQyMDYtN2Q2NC00NmYyLTk3OGEtZWVjMDJmNmE5NDM2XC9kOWM1bDl3LTA2NTkxNDYxLTQ5OGEtNGE4ZC1hNmY5LTIxNTA0M2ZlOWVkYi5qcGciLCJ3aWR0aCI6Ijw9MTIwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.yaRdiuYCH8WCFFyKfoHAOKAXez4NJLMKH1o1HTedUEY");
+  position: absolute;
+}
+}
+@media(min-width: 1200px){
+  .formWrapper {
+  width: 50%;
+  height: 100vh;
+  position: relative;
+  float: right;
+background: #6441A5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  } 
+}
+@media(min-width:770px){
+  .loginWrapper {
+  width: 50%;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3665d206-7d64-46f2-978a-eec02f6a9436/d9c5l9w-06591461-498a-4a8d-a6f9-215043fe9edb.jpg/v1/fill/w_1071,h_746,q_70,strp/the_archivist_by_juliedillon_d9c5l9w-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODM2IiwicGF0aCI6IlwvZlwvMzY2NWQyMDYtN2Q2NC00NmYyLTk3OGEtZWVjMDJmNmE5NDM2XC9kOWM1bDl3LTA2NTkxNDYxLTQ5OGEtNGE4ZC1hNmY5LTIxNTA0M2ZlOWVkYi5qcGciLCJ3aWR0aCI6Ijw9MTIwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.yaRdiuYCH8WCFFyKfoHAOKAXez4NJLMKH1o1HTedUEY");
+  position: absolute;
+}
+}
+@media(min-width: 770px){
+  .formWrapper {
+  width: 50%;
+  height: 100vh;
+  position: relative;
+  float: right;
+background: #6441A5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  } 
+}
+@media(max-width: 769px){
+  .loginWrapper {
+  width: 0%;
+  height: 100vh;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.9)),
+    url("https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3665d206-7d64-46f2-978a-eec02f6a9436/d9c5l9w-06591461-498a-4a8d-a6f9-215043fe9edb.jpg/v1/fill/w_1071,h_746,q_70,strp/the_archivist_by_juliedillon_d9c5l9w-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODM2IiwicGF0aCI6IlwvZlwvMzY2NWQyMDYtN2Q2NC00NmYyLTk3OGEtZWVjMDJmNmE5NDM2XC9kOWM1bDl3LTA2NTkxNDYxLTQ5OGEtNGE4ZC1hNmY5LTIxNTA0M2ZlOWVkYi5qcGciLCJ3aWR0aCI6Ijw9MTIwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.yaRdiuYCH8WCFFyKfoHAOKAXez4NJLMKH1o1HTedUEY");
+  position: absolute;
+}
+}
+@media(max-width: 769px){
+  .formWrapper {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  float: right;
+background: #6441A5;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #2a0845, #6441A5);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #2a0845, #6441A5); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  } 
+}
+.bonfireLogo {
+  margin-top: 25vh;
+}
+.text {
+  h3 {
+    font-size: 18px;
+    color: #fff;
+  }
+  margin-top: 1vh;
+  font-family: Lato Light;
+}
+
+
+.textLogin {
+  h1 {
+    font-size: 6vh;
+  }
+  font-family: Lato Light;
+  margin-top: 25vh;
+  color: #f4f4f4;
+  margin-left: 6%
+}
+.formContent {
+  width: 60%;
+  margin-left: 23%;
+  margin-top: 10vh;
+}

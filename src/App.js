@@ -1,28 +1,30 @@
-import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState, useEffect, Component } from 'react';
+import Routes from "./Services/routes";
+import "./styles.css";
+import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
+import { CssBaseline, CircularProgress } from '@material-ui/core'
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
+import firebase from './firebaseConfig'
 
-class App extends Component {
-  render() {
-    return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
-    );
-  }
+const theme = createMuiTheme();
+
+export default function App() {
+  const [firebaseInitialized, setFirebaseInitialized] = useState(false);
+
+  useEffect(() => {
+    firebase.isInitialized().then(val => {
+      setFirebaseInitialized(val);
+    });
+  });
+
+  return firebaseInitialized !== false ? (
+    <MuiThemeProvider theme={theme}>
+      <CssBaseline />
+        <Routes/>
+    </MuiThemeProvider>
+  ) : (
+    <div id="loader">
+      <CircularProgress />
+    </div>
+  );
 }
-
-export default App;
