@@ -15,6 +15,7 @@ import { Link, withRouter } from "react-router-dom";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles/";
 import firebase from "../../firebaseConfig";
 import LoginIcon from "./Crossing Swords.png";
+import Header from "../../Components/Header/header";
 import Character from "./Character.png";
 import "./login.scss";
 
@@ -81,6 +82,7 @@ function SignIn(props) {
 
   return (
     <div className="appSign">
+      <Header/>
       <main className={classes.main}>
         <Paper className={classes.paper}>
           <Avatar className={classes.avatar}>

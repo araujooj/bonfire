@@ -8,6 +8,7 @@ import {
   Input,
   InputLabel
 } from "@material-ui/core";
+import Header from '../../Components/Header/header'
 import {Icon} from 'semantic-ui-react'
 import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
 import withStyles from "@material-ui/core/styles/withStyles";
@@ -56,6 +57,7 @@ function Register(props) {
 
   return (
     <div className="appSign">
+      <Header/>
       <main className={classes.main}>
         <Paper className={classes.paper}>
           <Avatar className={classes.avatar}>
