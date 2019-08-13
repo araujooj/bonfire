@@ -1,25 +1,18 @@
 
 .app{
     width: 100%;
-    height: 200%;
-    background: linear-gradient(0deg,rgba(0,0,0, .9),rgba(0,0,0, .9)), 
-    url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3665d206-7d64-46f2-978a-eec02f6a9436/d9c5l9w-06591461-498a-4a8d-a6f9-215043fe9edb.jpg/v1/fill/w_1071,h_746,q_70,strp/the_archivist_by_juliedillon_d9c5l9w-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODM2IiwicGF0aCI6IlwvZlwvMzY2NWQyMDYtN2Q2NC00NmYyLTk3OGEtZWVjMDJmNmE5NDM2XC9kOWM1bDl3LTA2NTkxNDYxLTQ5OGEtNGE4ZC1hNmY5LTIxNTA0M2ZlOWVkYi5qcGciLCJ3aWR0aCI6Ijw9MTIwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.yaRdiuYCH8WCFFyKfoHAOKAXez4NJLMKH1o1HTedUEY');
-    position: absolute;
+    height: 100%;
+    background-image: radial-gradient(ellipse at 50% 104%, #7701b3 0%,#3c2057 5%,#131212 58%);
     background-size:cover;
    
 }
-.appSign{
-      width: 100%;
-    height: 100%;
-    background: linear-gradient(0deg,rgba(0,0,0, .9),rgba(0,0,0, .9)), 
-    url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/3665d206-7d64-46f2-978a-eec02f6a9436/d9c5l9w-06591461-498a-4a8d-a6f9-215043fe9edb.jpg/v1/fill/w_1071,h_746,q_70,strp/the_archivist_by_juliedillon_d9c5l9w-pre.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9ODM2IiwicGF0aCI6IlwvZlwvMzY2NWQyMDYtN2Q2NC00NmYyLTk3OGEtZWVjMDJmNmE5NDM2XC9kOWM1bDl3LTA2NTkxNDYxLTQ5OGEtNGE4ZC1hNmY5LTIxNTA0M2ZlOWVkYi5qcGciLCJ3aWR0aCI6Ijw9MTIwMCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.yaRdiuYCH8WCFFyKfoHAOKAXez4NJLMKH1o1HTedUEY');
-    position: absolute;
-    background-size:cover;
-}
+
 .title{
     text-align: center;
     margin-bottom: 0;
     margin-top: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     h3{
         color: #fff;
         letter-spacing: 1px;
@@ -38,7 +31,29 @@
     overflow: visible;
     }
 }
-.imagem{
-    width: 100%;
-    height: 40%;
+.linkMain{
+    display: block;
+    color: #fff;
+    padding-bottom: 10px;
+    cursor: pointer;
+    margin: 0px 12px;
+    border-bottom: 1px solid rgba(0,0,0,0);
+    font-size: 12px;
+    -webkit-transition: all 300ms linear;
+    -moz-transition: all 300ms linear;
+    -o-transition: all 300ms linear;
+    -ms-transition: all 300ms linear;
+    transition: all 300ms linear;
+}
+.linkMain:hover{
+      color: #fff;
+      border-bottom: 1px solid #7500b1;
+}
+.explication{
+    max-width: 95%;
+    max-height: 50%;
+}
+.explicationText{
+color: #fff;
+margin-top: 25%;
 }

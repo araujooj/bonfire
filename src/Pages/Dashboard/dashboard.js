@@ -7,6 +7,7 @@ import {
   Button
 } from "@material-ui/core";
 import VerifiedUserOutlined from "@material-ui/icons/VerifiedUserOutlined";
+import LoggedHeader from '../../Components/LoggedHeader/loggedheader'
 import withStyles from "@material-ui/core/styles/withStyles";
 import firebase from "../../firebaseConfig";
 import { withRouter } from "react-router-dom";
@@ -45,7 +46,7 @@ function Dashboard(props) {
 
   if (!firebase.getCurrentUsername()) {
     // not logged in
-    alert("Please login first");
+    alert("Falha na autenticação");
     props.history.replace("/login");
     return null;
   }
@@ -58,6 +59,7 @@ function Dashboard(props) {
 
   return (
     <div className = 'appSign'>
+      <LoggedHeader></LoggedHeader>
     <main className={classes.main}>
       <Paper className={classes.paper}>
         <Avatar className={classes.avatar}>

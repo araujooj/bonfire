@@ -1,21 +1,28 @@
 import React from "react";
-import { Card , Image, Button, Icon} from "semantic-ui-react";
+import PropTypes from "prop-types";
+import Grid from "@material-ui/core/Grid";
+import { Image } from "semantic-ui-react";
+import ParallaxComponent from "react-parallax-component";
 import { BrowserRouter as Router, Link } from "react-router-dom";
 
 import "./main.scss";
 
+import CardArticle from "./cardArticle";
+import CardBooks from "./cardBooks";
+import CardSignUp from "./cardSignUp";
 import Header from "../../Components/Header/header";
-import Footer from '../../Components/Footer/footer'
-import CadastroIcon from './Game Analysis.png'
-import AcervoIcon from './Quest.png'
-import StoryIcon from './Story.png'
+import Footer from "../../Components/Footer/footer";
+import Artigos from "./artigo.png";
+import Livros from "./livors.png";
+import Cadastrar from "./cadastrar.png";
+import VetorLogo from "./vetor logo.png";
 
 function Main(props) {
   return (
     <div className="app">
       <Header />
       <div className="title">
-        <h3>Nós somos o acervo que você jogador de RPG precisa</h3>
+        <h3>Nós somos o kit de ferramentas digital que você jogador de RPG precisa</h3>
         <hr />
         <h4>Você aventureiro, aqui poderá descansar em nossa fogueira</h4>
       </div>
@@ -23,88 +30,51 @@ function Main(props) {
       <br />
       <br />
       <Router>
-        <Card.Group
-          itemsPerRow={2}
-          style={{ margin: "20px", textAlign: "center" }}
-        >
-          <Card color="red">
-            <center>
-              <Image src={CadastroIcon} size="tiny" />
-            </center>
-            <Card.Content>
-              <Card.Header>Cadastro</Card.Header>
-              <Card.Description>
-                Se cadastre em nossa plataforma !
-              </Card.Description>
-            </Card.Content>
-            <Card.Content extra align="center">
+        <center>
+          <Grid container>
+            <Grid item md={4} xs={12} sm={15}>
               <Link
                 to="/cadastro"
                 onClick={() => {
                   window.location.href = "/cadastro";
                 }}
+                className="linkMain"
               >
-                <Button color="yellow">
-                  <Icon name="list" />
-                  Clique e descubra
-                </Button>
+                <CardSignUp />
               </Link>
-            </Card.Content>
-          </Card>
-          <Card color="red">
-            <center>
-              <Image src={AcervoIcon} size="tiny" />
-            </center>
-            <Card.Content>
-              <Card.Header>Acervo</Card.Header>
-              <Card.Description>Veja nosso acervo...</Card.Description>
-            </Card.Content>
-            <Card.Content extra align="center">
+            </Grid>
+            <Grid item md={4} xs={12} sm={15}>
               <Link
-                to="/livros"
+                to="/personagem"
                 onClick={() => {
-                  window.location.href = "/livros";
+                  window.location.href = "/personagem";
                 }}
+                className="linkMain"
               >
-              <Button color="yellow">
-                <Icon name="list" />
-                Clique e descubra
-              </Button>
+                <CardBooks />
               </Link>
-            </Card.Content>
-          </Card>
-        </Card.Group>
-        <Card.Group
-          itemsPerRow={1}
-          style={{ margin: "25px", textAlign: "center" }}
-        >
-          <Card color="red">
-            <center>
-              <Image src={StoryIcon} size="tiny" />
-            </center>
-
-            <Card.Content>
-              <Card.Header>Artigos</Card.Header>
-              <Card.Description>Leia algum artigo...</Card.Description>
-            </Card.Content>
-            <Card.Content extra align="center">
+            </Grid>
+            <Grid item md={4} xs={12} sm={15}>
               <Link
                 to="/artigos"
                 onClick={() => {
                   window.location.href = "/artigos";
                 }}
+                className="linkMain"
               >
-                <Button color="yellow">
-                  <Icon name="list" />
-                  Clique e descubra
-                </Button>
+                <CardArticle />
               </Link>
-            </Card.Content>
-          </Card>
-        </Card.Group>
-      <Footer/>
+            </Grid>
+          </Grid>
+        </center>
+        <center>
+         
+        </center>
+
+        <Footer />
       </Router>
     </div>
   );
 }
+
 export default Main;

@@ -11,12 +11,10 @@ const Footer = () => {
         Se conecte conosco nas redes sociais!
         <p />
         <center>
-          <Router>
-            <Link to="www.facebook.com">
-              <Button circular color="purple" icon="facebook" size="huge" />
-            </Link>
+          <Router> 
+            <Button circular color="purple" icon="facebook" size="huge" />
             <Button circular color="purple" icon="instagram" size="huge" />
-            <Button circular color="purple" icon="github" size="huge" />
+            <Button circular color="purple" icon="behance" size="huge" />
             <p />
             Desenvolvido por:
             <p />

@@ -48,7 +48,8 @@ const styles = theme => ({
     marginTop: theme.spacing.unit
   },
   submit: {
-    marginTop: theme.spacing.unit * 3
+    marginTop: theme.spacing.unit * 3,
+    hover: 'inherit'
   }
 });
 const theme = createMuiTheme({

@@ -5,14 +5,14 @@ import {
   MDBNavbarNav,
   MDBNavItem,
   MDBNavbarToggler,
-  MDBCollapse,
+  MDBCollapse
 } from "mdbreact";
-import {Icon, Image } from 'semantic-ui-react'
+import { Icon, Image } from "semantic-ui-react";
 import { BrowserRouter as Router, Link } from "react-router-dom";
-import './header.scss'
+import "../Header/header.scss";
+import firebase from "../../firebaseConfig";
 
-
-class Header extends Component {
+class LoggedHeader extends Component {
   state = {
     isOpen: false
   };
@@ -21,7 +21,14 @@ class Header extends Component {
     this.setState({ isOpen: !this.state.isOpen });
   };
 
-  render() {
+  render(props) {
+      if (!firebase.getCurrentUsername()) {
+        // not logged in
+        alert("Faça login antes");
+        props.history.replace("/login");
+        return null;
+      }
+
     return (
       <Router>
         <MDBNavbar
@@ -48,9 +55,9 @@ class Header extends Component {
             <MDBNavbarNav left>
               <MDBNavItem>
                 <Link
-                  to="/"
+                  to="/dashboard"
                   onClick={() => {
-                    window.location.href = "/";
+                    window.location.href = "/dashboard";
                   }}
                   className="link"
                 >
@@ -74,9 +81,9 @@ class Header extends Component {
               </MDBNavItem>
               <MDBNavItem>
                 <Link
-                  to="/criacoes"
+                  to="/creations"
                   onClick={() => {
-                    window.location.href = "/criacoes";
+                    window.location.href = "/creations";
                   }}
                   className="link"
                 >
@@ -88,9 +95,9 @@ class Header extends Component {
 
               <MDBNavItem>
                 <Link
-                  to="/personagem"
+                  to="/character"
                   onClick={() => {
-                    window.location.href = "/personagem";
+                    window.location.href = "/character";
                   }}
                   className="link"
                 >
@@ -99,44 +106,17 @@ class Header extends Component {
                   Personagem
                 </Link>
               </MDBNavItem>
-
-              <MDBNavItem>
-                <Link
-                  to="/sobre"
-                  onClick={() => {
-                    window.location.href = "/sobre";
-                  }}
-                  className="link"
-                >
-                  {" "}
-                  <Icon name="users" />
-                  Sobre nós
-                </Link>
-              </MDBNavItem>
             </MDBNavbarNav>
             <MDBNavbarNav right>
               <MDBNavItem>
                 <Link
-                  to="login"
+                  to="/perfil"
                   onClick={() => {
-                    window.location.href = "/login";
+                    window.location.href = "/perfil";
                   }}
                   className="link"
                 >
-                  <Icon name="sign in" />
-                  Login
-                </Link>
-              </MDBNavItem>
-              <MDBNavItem>
-                <Link
-                  to="cadastro"
-                  onClick={() => {
-                    window.location.href = "/cadastro";
-                  }}
-                  className="link"
-                >
-                  <Icon name="signup" />
-                  Cadastrar
+                  <strong>{firebase.getCurrentUsername()}</strong>
                 </Link>
               </MDBNavItem>
             </MDBNavbarNav>
@@ -147,4 +127,4 @@ class Header extends Component {
   }
 }
 
-export default Header;
+export default LoggedHeader;

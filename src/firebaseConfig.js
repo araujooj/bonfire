@@ -1,7 +1,10 @@
+
+//Arquivo de conexão e importação das funções do firebase
 import app from "firebase/app";
 import 'firebase/firestore' 
 import 'firebase/auth'
 
+//Conexão
 const firebaseConfig = {
   apiKey: "AIzaSyDJX-0RxurgFU5JgxjsXp8Paon8D3_HwMI",
   authDomain: "bonfire-web.firebaseapp.com",
@@ -27,6 +30,7 @@ class Firebase {
     return this.auth.signOut();
   }
 
+  //INCLUSÃO
   async register(name, email, password) {
     await this.auth.createUserWithEmailAndPassword(email, password);
     return this.auth.currentUser.updateProfile({
@@ -34,9 +38,10 @@ class Firebase {
     });
   }
 
+  //INCLUSÃO
   addQuote(quote) {
     if (!this.auth.currentUser) {
-      return alert("Not authorized");
+      return alert("Sem autorização");
     }
 
     return this.db
@@ -52,10 +57,12 @@ class Firebase {
     });
   }
 
+  //CONSULTA
   getCurrentUsername() {
     return this.auth.currentUser && this.auth.currentUser.displayName;
   }
 
+  //CONSULTA
   async getCurrentUserQuote() {
     const quote = await this.db
       .doc(`users_codedamn_video/${this.auth.currentUser.uid}`)

@@ -9,6 +9,12 @@ export default class Artigos extends Component {
         return (
           <div className="artigosAPP">
             <Header />
+            <div className = 'title'>
+              <h3>
+                Os ultimos artigos publicados! 
+   
+              </h3>
+            </div>
             <Footer />
           </div>
         );
