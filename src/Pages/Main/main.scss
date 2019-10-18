@@ -15,6 +15,112 @@
 }
 
 
+.section {
+  padding: 70px 0;
+  position: relative; }
+  .section .row + .category {
+    margin-top: 15px; }
+  .section .carousel {
+    width: 100%; }
+
+.path {
+  position: absolute;
+  opacity: 0.02; }
+
+.dots {
+  position: absolute;
+  opacity: 0.07;
+  z-index: 2; }
+
+.shapes {
+  position: absolute;
+  opacity: 0.02;
+  z-index: 2; }
+
+.main {
+  position: relative;
+  width: 100%; }
+
+.section-navbars {
+  padding-bottom: 0;
+  overflow: hidden; }
+  .section-navbars .navbar {
+    z-index: 2; }
+  .section-navbars img.path {
+    left: -400px; }
+
+.section-typo {
+  overflow: hidden; }
+  .section-typo .path {
+    right: -400px; }
+  .section-typo .path1 {
+    bottom: 5%;
+    width: 70%;
+    left: -200px; }
+
+.section-pagination .path {
+  width: 65%;
+  right: 0%;
+  top: 48%; }
+
+.section-pagination .path1 {
+  width: 30%;
+  top: 0;
+  left: 3%; }
+
+.section-javascript {
+  overflow: hidden; }
+  .section-javascript .path {
+    right: -300px;
+    width: 80%; }
+  .section-javascript .path1 {
+    width: 25%;
+    left: 3%;
+    top: 0; }
+
+.section-full-screen {
+  height: 100vh; }
+
+.section-signup {
+  padding-top: 20vh;
+  overflow: hidden; }
+  .section-signup .square {
+    background-size: cover; }
+  .section-signup .square-1 {
+    height: 300px;
+    width: 300px;
+    background-image: url("../../assets/img/square1.png");
+    top: 80px;
+    left: 100px;
+    opacity: 0.3;
+    animation-duration: 5s; }
+  .section-signup .square-2 {
+    height: 200px;
+    width: 200px;
+    background: url("../../assets/img/square3.png");
+    background-size: cover;
+    bottom: 40px;
+    left: 600px;
+    opacity: 0.1;
+    animation-duration: 8s; }
+  .section-signup .square-3 {
+    height: 100px;
+    width: 100px;
+    background: url("../../assets/img/square2.png");
+    background-size: cover;
+    top: 300px;
+    left: 700px;
+    animation-duration: 5s; }
+  .section-signup .square-4 {
+    height: 250px;
+    width: 250px;
+    background: url("../../assets/img/square3.png");
+    background-size: cover;
+    top: 0px;
+    right: 100px;
+    opacity: 0.8;
+    animation-duration: 9s; }
+
 .title{
     text-align: center;
     margin-bottom: 0;

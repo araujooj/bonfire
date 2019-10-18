@@ -6,8 +6,6 @@ import Register from '../Cadastro/cadastro'
 import Header from "../../Components/Header/header";
 import Footer from "../../Components/Footer/footer";
 
-import '../../assets/css/blk-design-system-react.css'
-
 function Main(props) {
   return (
     <div className="appLanding">
