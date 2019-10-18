@@ -1,78 +1,113 @@
 import React from "react";
-import PropTypes from "prop-types";
-import Grid from "@material-ui/core/Grid";
-import { Image } from "semantic-ui-react";
-import ParallaxComponent from "react-parallax-component";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Container, Row, Col } from "reactstrap";
 
 import "./main.scss";
-
-import CardArticle from "./cardArticle";
-import CardBooks from "./cardBooks";
-import CardSignUp from "./cardSignUp";
+import Register from '../Cadastro/cadastro'
 import Header from "../../Components/Header/header";
 import Footer from "../../Components/Footer/footer";
-import Artigos from "./artigo.png";
-import Livros from "./livors.png";
-import Cadastrar from "./cadastrar.png";
-import VetorLogo from "./vetor logo.png";
+
+import '../../assets/css/blk-design-system-react.css'
 
 function Main(props) {
   return (
-    <div className="app">
+    <div className="appLanding">
       <Header />
-      <div className="title">
-        <h3>Nós somos o kit de ferramentas digital que você jogador de RPG precisa</h3>
-        <hr />
-        <h4>Você aventureiro, aqui poderá descansar em nossa fogueira</h4>
-      </div>
-      <br />
-      <br />
-      <br />
-      <Router>
-        <center>
-          <Grid container>
-            <Grid item md={4} xs={12} sm={15}>
-              <Link
-                to="/cadastro"
-                onClick={() => {
-                  window.location.href = "/cadastro";
-                }}
-                className="linkMain"
-              >
-                <CardSignUp />
-              </Link>
-            </Grid>
-            <Grid item md={4} xs={12} sm={15}>
-              <Link
-                to="/personagem"
-                onClick={() => {
-                  window.location.href = "/personagem";
-                }}
-                className="linkMain"
-              >
-                <CardBooks />
-              </Link>
-            </Grid>
-            <Grid item md={4} xs={12} sm={15}>
-              <Link
-                to="/artigos"
-                onClick={() => {
-                  window.location.href = "/artigos";
-                }}
-                className="linkMain"
-              >
-                <CardArticle />
-              </Link>
-            </Grid>
-          </Grid>
-        </center>
-        <center>
-         
-        </center>
+        <Container>
+          <div className="section section-typo section section-signup">
+          <div className="squares square-1" />
+          <div className="squares square-2" />
+          <div className="squares square-3" />
+          <div className="squares square-4" />
+            <h1 className="h1-seo">B O N F I R E</h1>
+            <h2 className="d-none d-sm-block" >
+            Uma plataforma simples e fácil para os jogadores de RPG. <br/>Sente em nossa fogueira e aprecie nossas funcionalidades
+            </h2>
+          </div>
+        </Container>
 
-        <Footer />
-      </Router>
+      <div className="section section-typo section section-signup">
+          <div className="squares square-1" />
+          <div className="squares square-2" />
+          <div className="squares square-3" />
+        <Container>
+          <div id="images">
+            <br/>
+            <h3 >Aqui você pode criar:</h3>
+            <center />
+            <Row
+              style={{
+                justifyContent: "center"
+              }}
+            >
+              <Col className="mt-5 mt-sm-0" sm="2" xs="3">
+                <center>
+                  <h4>Artigos</h4>
+                  <br/>
+                </center>
+
+                <img
+                  alt="..."
+                  className="img-fluid rounded-circle shadow-lg"
+                  src={require("../../assets/img/artigos.jpg")}
+                  style={{ width: "150px" }}
+                />
+              </Col>
+              <Col className="mt-5 mt-sm-0" sm="2" xs="3">
+                <center>
+                  <h4>Personagens</h4>
+                  <br/>
+                </center>
+                <img
+                  alt="..."
+                  className="img-fluid rounded-circle shadow-lg"
+                  src={require("../../assets/img/personagem.jpg")}
+                  style={{ width: "150px", }}
+                />
+              </Col>
+              <Col className="mt-5 mt-sm-0" sm="2" xs="3">
+                <center>
+                  <h4>Itens</h4>
+                  <br/>
+                </center>
+
+                <img
+                  alt="..."
+                  className="img-fluid rounded-circle shadow-lg"
+                  src={require("../../assets/img/itens.jpg")}
+                  style={{ width: "150px" }}
+                />
+              </Col>
+              <Col className="mt-5 mt-sm-0" sm="2" xs="3">
+                <center>
+                  <h4>Magias</h4>
+                  <br/>
+                </center>
+
+                <img
+                  alt="..."
+                  className="img-fluid rounded-circle shadow-lg"
+                  src={require("../../assets/img/magias.jpg")}
+                  style={{ width: "150px" }}
+                />
+              </Col>
+              <Col className="mt-5 mt-sm-0" sm="2" xs="3">
+                <center>
+                  <h4>Monstros</h4>
+                  <br/>
+                </center>
+
+                <img
+                  alt="..."
+                  className="img-fluid rounded-circle shadow-lg"
+                  src={require("../../assets/img/monstros.jpg")}
+                  style={{ width: "150px" }}
+                />
+              </Col>
+            </Row>
+          </div>
+        </Container>
+      </div>
+      <Footer/>
     </div>
   );
 }

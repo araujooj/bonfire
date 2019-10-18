@@ -69,6 +69,10 @@ class Firebase {
       .get();
     return quote.get("quote");
   }
+
 }
+ 
+
+
 
 export default new Firebase();

@@ -56,9 +56,13 @@ function Register(props) {
   const [quote, setQuote] = useState("");
 
   return (
-    <div className="appSign">
+    <div className="app">
       <Header/>
+      <div className = 'section section-typo section section-signup'>
       <main className={classes.main}>
+      <div className="squares square-1" />
+          <div className="squares square-2" />
+          <div className="squares square-4" />
         <Paper className={classes.paper}>
           <Avatar className={classes.avatar}>
             <Icon name="sign in " />
@@ -128,6 +132,7 @@ function Register(props) {
           </form>
         </Paper>
       </main>
+      </div>
     </div>
   );
 

@@ -1,11 +1,19 @@
 
 .app{
     width: 100%;
-    height: 100%;
+    height: 110%;
     background-image: radial-gradient(ellipse at 50% 104%, #7701b3 0%,#3c2057 5%,#131212 58%);
     background-size:cover;
-   
+    position: absolute
 }
+.appLanding{
+    width: 100%;
+    height: 110%;
+    background-image: radial-gradient(ellipse at 50% 104%, #7701b3 0%,#3c2057 5%,#131212 58%);
+    background-size:cover;
+    position: relative
+}
+
 
 .title{
     text-align: center;
@@ -56,4 +64,87 @@
 .explicationText{
 color: #fff;
 margin-top: 25%;
+}
+.squares {
+    animation: move-left-right 1s infinite;
+    background: #ba54f5;
+    background: -webkit-linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
+    background: -o-linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
+    background: -moz-linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
+    background: linear-gradient(0deg, #ba54f5 0%, #e14eca 100%);
+    position: absolute;
+    transition: 0.5s ease-out;
+    overflow: hidden;
+    border-radius: 20%; }
+ .squares .square1 {
+      animation: move-left-right 4s infinite;
+      height: 300px;
+      width: 300px;
+      opacity: 0.5;
+      left: 3%;
+      top: -21%; }
+ .squares .square2 {
+      animation: move-left-right 6s infinite;
+      height: 400px;
+      width: 400px;
+      opacity: 0.4;
+      right: -5%;
+      top: -12%; }
+    .squares .square3 {
+      animation: move-left-right 5s infinite;
+      height: 200px;
+      width: 200px;
+      opacity: 0.1;
+      left: -5%;
+      bottom: 0%; }
+     .squares .square4 {
+      animation: move-left-right 10s infinite;
+      height: 100px;
+      width: 100px;
+      opacity: 0.9;
+      right: 27%;
+      top: 70%; }
+     .squares .square5 {
+      animation: move-left-right 6s infinite;
+      height: 250px;
+      width: 250px;
+      opacity: 0.1;
+      left: 32%;
+      bottom: 29%; }
+   .squares .square6 {
+      animation: move-left-right 9s infinite;
+      left: 10%;
+      top: 35%;
+      height: 80px;
+      width: 80px;
+      opacity: 0.8; }
+     .squares .square7 {
+      animation: move-left-right 3s infinite;
+      width: 300px;
+      height: 300px;
+      right: -5%;
+      bottom: 0%;
+      opacity: 0.1; }
+  
+#images{
+    color: #fff
+}
+.content-center {
+    position: relative;
+    left: 50%;
+    z-index: 2;
+    -ms-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+    padding: 0 15px;
+    width: 100%;
+    max-width: 880px;
+
+
+    &.brand {
+      width: 47%;
+    }
+
 }
