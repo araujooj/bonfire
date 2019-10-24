@@ -15,7 +15,7 @@ import { Link, withRouter } from "react-router-dom";
 import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles/";
 import firebase from "../../firebaseConfig";
 import Header from "../../Components/Header/header";
-import "./login.scss";
+import "../../assets/scss/login.scss";
 
 const styles = theme => ({
   main: {

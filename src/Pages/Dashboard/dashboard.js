@@ -58,7 +58,7 @@ function Dashboard(props) {
       <div className="section section-typo section section-signup">
           <div className="squares square-1" />
           <div className="squares square-2" />
-          <div className="squares square-3" />
+          <div className="squares square-4" />
         <Container>
           <div id="images">
             <br/>

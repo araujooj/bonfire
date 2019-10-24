@@ -1,10 +1,11 @@
 import React from "react";
 import { Container, Row, Col } from "reactstrap";
 
-import "./main.scss";
-import Register from '../Cadastro/cadastro'
+import "../../assets/scss/main.scss";
 import Header from "../../Components/Header/header";
 import Footer from "../../Components/Footer/footer";
+import Signup from './signup'
+import '../../assets/css/blk-design-system-react.min.css'
 
 function Main(props) {
   return (
@@ -14,7 +15,6 @@ function Main(props) {
           <div className="section section-typo section section-signup">
           <div className="squares square-1" />
           <div className="squares square-2" />
-          <div className="squares square-3" />
           <div className="squares square-4" />
             <h1 className="h1-seo">B O N F I R E</h1>
             <h2 className="d-none d-sm-block" >
@@ -105,6 +105,7 @@ function Main(props) {
           </div>
         </Container>
       </div>
+      <Signup/>
       <Footer/>
     </div>
   );

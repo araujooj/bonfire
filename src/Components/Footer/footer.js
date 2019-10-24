@@ -30,12 +30,12 @@ class Footer extends React.Component {
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink to="/landing-page" tag={Link}>
+                  <NavLink to="/artigos" tag={Link}>
                     Artigos
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink to="/login-page" tag={Link}>
+                  <NavLink to="/login" tag={Link}>
                     Login
                   </NavLink>
                 </NavItem>
@@ -44,22 +44,22 @@ class Footer extends React.Component {
             <Col md="3">
               <Nav>
                 <NavItem>
-                  <NavLink href="https://creative-tim.com/contact-us?ref=blkdsr-footer">
+                  <NavLink to="/login" tag={Link}>
                    Monstros
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="https://creative-tim.com/about-us?ref=blkdsr-footer">
+                  <NavLink to="/login" tag={Link}>
                     Magias
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="https://creative-tim.com/blog?ref=blkdsr-footer">
+                  <NavLink to="/login" tag={Link}>
                     Itens
                   </NavLink>
                 </NavItem>
                 <NavItem>
-                  <NavLink href="https://opensource.org/licenses/MIT">
+                  <NavLink to="/login" tag={Link}>
                     Personagens
                   </NavLink>
                 </NavItem>
