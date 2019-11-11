@@ -119,6 +119,7 @@ class Edit extends Component {
                     value={this.state.titulo}
                     onChange={this.onChange}
                     placeholder="Title"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -132,6 +133,7 @@ class Edit extends Component {
                     value={this.state.descricao}
                     onChange={this.onChange}
                     placeholder="Description"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -144,6 +146,7 @@ class Edit extends Component {
                     onChange={this.handleChange}
                     options={options}
                     name="raridade"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -157,6 +160,7 @@ class Edit extends Component {
                     value={this.state.tipo}
                     onChange={this.onChange}
                     placeholder="Author"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -170,6 +174,7 @@ class Edit extends Component {
                     value={this.state.dano}
                     onChange={this.onChange}
                     placeholder="Author"
+                    required
                   />
                 </div>
                 <button type="submit" class="btn btn-success">

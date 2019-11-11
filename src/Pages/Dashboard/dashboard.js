@@ -69,7 +69,7 @@ function Dashboard(props) {
             >
               <Col className="mt-5 mt-sm-0" sm="2" xs="5">
                 <center>
-                  <h4>Artigos</h4>
+                  <h4>Histórias</h4>
                   <br/>
                 </center>
 
@@ -84,37 +84,13 @@ function Dashboard(props) {
                  <Button
                   className="nav-link d-none d-lg-block"
                   color="primary"
-                  to="artigos" tag={Link}
+                  to="historias" tag={Link}
                 >
                   <i className="fas fa-newspaper" style ={{
                     marginRight: '6px'
                   }}/>
                    
-                  Criar artigos
-                </Button>
-              </Col>
-              <Col className="mt-5 mt-sm-0" sm="2" xs="5">
-                <center>
-                  <h4>Personagens</h4>
-                  <br/>
-                </center>
-                <img
-                  alt="..."
-                  className="img-fluid rounded-circle shadow-lg"
-                  src={require("../../assets/img/personagem.jpg")}
-                  style={{ width: "150px", }}
-                />
-                  <br/>
-                <br/>
-                 <Button
-                  className="nav-link d-none d-lg-block"
-                  color="primary"
-                  to="personagens" tag={Link}
-                >
-                  <i className="fas fa-id-card" style ={{
-                    marginRight: '6px'
-                  }} />
-                  Criar personagens
+                  Criar Histórias
                 </Button>
               </Col>
               <Col className="mt-5 mt-sm-0" sm="2" xs="5">

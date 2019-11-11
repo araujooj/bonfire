@@ -1,25 +1,21 @@
 import React, { Component } from "react";
 import firebase from "../../firebaseConfig";
 import { Link } from "react-router-dom";
-import { Container, Row, Col } from "reactstrap";
+import { Container } from "reactstrap";
 import LoggedHeader from "../../Components/LoggedHeader/loggedheader";
-
 import Select from "react-select";
 
 const options = [
-  {  label: "Ínfimo" },
-  { label: "Mínimo" },
-  {label: "Pequeno"},
-  {label: "Médio"},
-  {label: "Grande"},
-  {label: "Enorme"},
-  {label: "Descomunal"},
-  {label: "Colossal"}
+  { label: "Comum" },
+  { label: "Incomum" },
+  { label: "Raro" },
+  { label: "Muito raro" },
+  { label: "Lendário" }
 ];
-
 const niveis = [
-  {  label: "1" },
-  { label: "2" },
+  {label: "0"},
+  {label: "1"},
+  {label: "2"},
   {label: "3"},
   {label: "4"},
   {label: "5"},
@@ -27,106 +23,112 @@ const niveis = [
   {label: "7"},
   {label: "8"},
   {label: "9"},
-  {label: "10"},
-  {label: "11"},
-  {label: "12"},
-  {label: "13"},
-  {label: "14"},
-  {label: "15"},
-  {label: "16"},
-  {label: "17"},
-  {label: "18"},
-  {label: "19"},
-  {label: "20"},
-  {label: "20+"}
 
 ];
 
-
-class CreateMonster extends Component {
-  constructor() {
-    super();
+class EditMagic extends Component {
+  constructor(props) {
+    super(props);
     this.auth = firebase.auth
-    this.ref = firebase.db.collection("monstros");
     this.state = {
+      key: "",
       nome: "",
       descricao: "",
+      dano: "",
       nivel: "",
-      tamanho: "",
-      tipo: "",
-      habilidades: ""
+      alcance: "",
+      materialNecessario: ""
     };
   }
-  componentDidMount () {
+
+  
+  componentDidMount() {
     if (!this.auth.currentUser) {
       alert("Sem autorização");
       this.props.history.push("/login")
     }
-  }
-  onChange = e => {
-    const state = this.state;
-    state[e.target.name] = e.target.value;
-    this.setState(state);
-  };
-
-  onSubmit = e => {
-    e.preventDefault();
-
-    const { 
-      nome,
-      descricao,
-      nivel,
-      tamanho,
-      tipo,
-      habilidades } = this.state;
-
-    this.ref
-      .add({
-        nome,
-        descricao,
-        nivel,
-        tamanho,
-        tipo,
-        habilidades
-      })
-      .then(docRef => {
+    const ref = firebase.db.collection("magias").doc(this.props.match.params.id);
+    ref.get().then(doc => {
+      if (doc.exists) {
+        const magias = doc.data();
         this.setState({
-          nome: "",
-          descricao: "",
-          nivel: "",
-          tamanho: "",
-          tipo: "",
-          habilidades: ""
+          key: doc.id,
+          nome: magias.nome,
+          descricao: magias.descricao,
+          dano: magias.dano,
+          nivel: magias.nivel.label,
+          alcance: magias.alcance.label,
+          materialNecessario: magias.materialNecessario
         });
-        this.props.history.push("/monstros");
-      })
-      .catch(error => {
-        alert("Erro ao adicionar: ", error);
-      });
+      } else {
+        alert("Item não encontrado");
+        this.props.history.push("/magias");
+      }
+    });
+  }
 
-      
-  };
-
-  handleChange = tamanho => {
-    this.setState({ tamanho }, () => this.state.tamanho.toString()
+  handleChange = alcance => {
+    this.setState({ alcance }, () => this.state.alcance.toString()
     );
   };
-
+  
   
   handleChange2 = nivel => {
     this.setState({ nivel }, () => this.state.nivel.toString()
     );
   };
+  onChange = e => {
+    const state = this.state;
+    state[e.target.name] = e.target.value;
+    this.setState({ magias: state });
+  };
 
+  onSubmit = e => {
+    e.preventDefault();
 
-  render() {
-    const {    
+    const {  
       nome,
       descricao,
+      dano,
       nivel,
-      tamanho,
-      tipo,
-      habilidades  } = this.state;
+      alcance,
+      materialNecessario } = this.state;
+
+    const updateRef = firebase.db.collection("magias").doc(this.state.key);
+    updateRef
+      .set({
+        nome,
+        descricao,
+        dano,
+        nivel,
+        alcance,
+        materialNecessario
+      })
+      .then(docRef => {
+        this.setState({
+          key: "",
+          nome: "",
+          descricao: "",
+          dano: "",
+          nivel: "",
+          alcance: "",
+          materialNecessario: ""
+        });
+        this.props.history.push("/magias/show/" + this.props.match.params.id);
+      })
+      .catch(error => {
+        console.error("Error adding document: ", error);
+      });
+  };
+
+  render() {
+    const {  
+      nome,
+      descricao,
+      dano,
+      nivel,
+      alcance,
+      materialNecessario } = this.state;
     return (
       <div class="app">
         <LoggedHeader />
@@ -134,21 +136,21 @@ class CreateMonster extends Component {
           <div class="section section-typo section section-signup">
             <div className="squares square-1" />
             <div className="squares square-2" />
-            <h1 class="h1-seo">Adicionar Monstro</h1>
-            <div class="panel-body">
+            <h1 class="h1-seo">Adicionar magia</h1>
+            <div class="panel-body form-group">
               <h4>
-                <Link to="/monstros" class="btn btn-primary">
-                  Lista de monstros
+                <Link to="/magias" class="btn btn-primary">
+                  Lista de magias
                 </Link>
               </h4>
-              <form onSubmit={this.onSubmit}>
-                <div class="form-group">
+              <form  onSubmit={this.onSubmit}>
+                <div className="form-group">
                   <label for="title">
                     <h3>Nome</h3>
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    className="form-control"
                     name="nome"
                     value={nome}
                     onChange={this.onChange}
@@ -160,14 +162,29 @@ class CreateMonster extends Component {
                     <h3>Descrição</h3>
                   </label>
                   <textArea
-                    class="form-control"
+                    className="form-control"
                     name="descricao"
                     onChange={this.onChange}
-                    placeholder="Descrição"
+                    placeholder="O que a magia faz"
                     cols="80"
                     rows="3"
                   >
                     {descricao}
+                  </textArea>
+                </div>
+                <div class="form-group">
+                  <label for="description">
+                    <h3>Material Necessário</h3>
+                  </label>
+                  <textArea
+                    className="form-control"
+                    name="materialNecessario"
+                    onChange={this.onChange}
+                    placeholder="Material necessário"
+                    cols="80"
+                    rows="3"
+                  >
+                    {materialNecessario}
                   </textArea>
                 </div>
                 <div class="form-group">
@@ -184,39 +201,26 @@ class CreateMonster extends Component {
                 </div>
                 <div class="form-group">
                   <label for="author">
-                    <h3>Tamanho</h3>
+                    <h3>Alcance</h3>
                   </label>
                   <Select
                     placeholder = 'Selecione..'
-                    value={tamanho}
+                    value={alcance}
                     onChange={this.handleChange}
                     options={options}
-                    name="tamanho"
+                    name="alcance"
                   />
                 </div>
+              
                 <div class="form-group">
                   <label for="author">
-                    <h3>Tipo</h3>
+                    <h3>Dano</h3>
                   </label>
                   <input
                     type="text"
                     class="form-control"
-                    name="tipo"
-                    value={tipo}
-                    onChange={this.onChange}
-                    placeholder="Tipo"
-                  />
-                </div>
-           
-                <div class="form-group">
-                  <label for="author">
-                    <h3>Habilidades</h3>
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="habilidades"
-                    value={habilidades}
+                    name="dano"
+                    value={dano}
                     onChange={this.onChange}
                     placeholder="Dano"
                   />
@@ -233,4 +237,4 @@ class CreateMonster extends Component {
   }
 }
 
-export default CreateMonster;
+export default EditMagic;

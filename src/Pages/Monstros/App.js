@@ -49,12 +49,12 @@ class Monstros extends Component {
 
   render() {
     return (
-      <div class="app">
+      <div class="appSign">
         <LoggedHeader/>
         <div class="panel panel-default">
         <Container>
           <div className="section section-typo section section-signup">
-          <div className="squares square-3" />
+          <div className="squares square-2" />
           <div className="squares square-4" />
             <h1 className="h1-seo">CRIAÇÃO DE MONSTROS</h1>
             <h2 className="d-none d-sm-block" >

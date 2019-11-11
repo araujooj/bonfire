@@ -9,7 +9,7 @@ import '../../assets/css/blk-design-system-react.min.css'
 
 function Main(props) {
   return (
-    <div className="appLanding">
+    <div className="app">
       <Header />
         <Container>
           <div className="section section-typo section section-signup">
@@ -39,7 +39,7 @@ function Main(props) {
             >
               <Col className="mt-5 mt-sm-0" sm="2" xs="3">
                 <center>
-                  <h4>Artigos</h4>
+                  <h4>Histórias</h4>
                   <br/>
                 </center>
 
@@ -48,18 +48,6 @@ function Main(props) {
                   className="img-fluid rounded-circle shadow-lg"
                   src={require("../../assets/img/artigos.jpg")}
                   style={{ width: "150px" }}
-                />
-              </Col>
-              <Col className="mt-5 mt-sm-0" sm="2" xs="3">
-                <center>
-                  <h4>Personagens</h4>
-                  <br/>
-                </center>
-                <img
-                  alt="..."
-                  className="img-fluid rounded-circle shadow-lg"
-                  src={require("../../assets/img/personagem.jpg")}
-                  style={{ width: "150px", }}
                 />
               </Col>
               <Col className="mt-5 mt-sm-0" sm="2" xs="3">
@@ -110,5 +98,6 @@ function Main(props) {
     </div>
   );
 }
+
 
 export default Main;

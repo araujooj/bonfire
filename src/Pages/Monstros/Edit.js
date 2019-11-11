@@ -145,7 +145,7 @@ class EditMonster extends Component {
       tipo,
       habilidades  } = this.state;
     return (
-      <div class="appLanding">
+      <div class="app">
         <LoggedHeader />
         <Container>
           <div class="section section-typo section section-signup">

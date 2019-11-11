@@ -8,11 +8,10 @@ import {
   Input,
   InputLabel
 } from "@material-ui/core";
-import LockOutlinedIcon from "@material-ui/icons/LockOutlined";
-import { Image, Icon } from "semantic-ui-react";
+import { Icon } from "semantic-ui-react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Link, withRouter } from "react-router-dom";
-import { MuiThemeProvider, createMuiTheme } from "@material-ui/core/styles/";
+import { createMuiTheme } from "@material-ui/core/styles/";
 import firebase from "../../firebaseConfig";
 import Header from "../../Components/Header/header";
 import "../../assets/scss/login.scss";
@@ -49,28 +48,6 @@ const styles = theme => ({
     marginTop: theme.spacing.unit * 3,
     hover: 'inherit'
   }
-});
-const theme = createMuiTheme({
-  overrides: {
-    // Name of the component ⚛️ / style sheet
-    MuiButton: {
-      // Name of the rule
-      text: {
-        // Some CSS
-        width: "30vh",
-        background: "linear-gradient(45deg, #efefbb, #d4d3dd)",
-        borderRadius: 3,
-        border: 0,
-        color: "black",
-        height: 50,
-        boxShadow: "0 3px 5px 2px #061161",
-        fontSize: "2.2vh",
-        padding: 0,
-        fontFamily: "Lato Light"
-      }
-    }
-  },
-  typography: { useNextVariants: true }
 });
 
 function SignIn(props) {

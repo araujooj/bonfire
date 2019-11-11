@@ -177,9 +177,9 @@ class LoggedHeader extends React.Component {
                   Ferramentas Bonfire
                 </DropdownToggle>
                 <DropdownMenu className="dropdown-with-icons">
-                  <DropdownItem tag={Link} to="/artigos">
+                  <DropdownItem tag={Link} to="/historias">
                     <i className="fas fa-newspaper" />
-                    Artigos
+                    Histórias
                   </DropdownItem>
                   <DropdownItem tag={Link} to="/personagens">
                     <i className="fas fa-id-card" />
@@ -202,9 +202,9 @@ class LoggedHeader extends React.Component {
               <NavItem className="p-0">
                 <NavLink
                   data-placement="bottom"
-                  href="https://www.instagram.com/agenciasouls"
+                  to = '/dashboard'
                   rel="noopener noreferrer"
-                  target="_blank"
+                  tag = {Link}
                   title="Seu perfil"
                 >
                   <i class="fas fa-user"></i>

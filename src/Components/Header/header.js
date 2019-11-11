@@ -179,7 +179,7 @@ class Header extends React.Component {
                 <DropdownMenu className="dropdown-with-icons">
                   <DropdownItem href="https://demos.creative-tim.com/blk-design-system-react/#/documentation/tutorial">
                     <i className="fas fa-newspaper" />
-                    Artigos
+                    Histórias
                   </DropdownItem>
                   <DropdownItem tag={Link} to="/register-page">
                     <i className="fas fa-id-card" />

@@ -2,17 +2,22 @@
 .app{
     width: 100%;
     height: 110%;
-    background-image: radial-gradient(ellipse at 50% 104%, #7701b3 0%,#3c2057 5%,#131212 58%);
+    background-image:radial-gradient(ellipse at 50% 104%, #7701b3 0%,#3c2057 5%,#131212 58%);
     background-size:cover;
-    position: absolute
+    position: relative
 }
-.appLanding{
+
+
+@media(max-width: 769px){
+  .app{
     width: 100%;
     height: 110%;
     background-image: radial-gradient(ellipse at 50% 104%, #7701b3 0%,#3c2057 5%,#131212 58%);
     background-size:cover;
     position: relative
 }
+}
+
 
 
 .section {

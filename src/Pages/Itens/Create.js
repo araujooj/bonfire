@@ -78,7 +78,7 @@ class Create extends Component {
   render() {
     const { titulo, descricao, raridade, tipo, dano } = this.state;
     return (
-      <div class="appLanding">
+      <div class="app">
         <LoggedHeader />
         <Container>
           <div class="section section-typo section section-signup">
@@ -103,6 +103,7 @@ class Create extends Component {
                     value={titulo}
                     onChange={this.onChange}
                     placeholder="Titulo"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -116,6 +117,7 @@ class Create extends Component {
                     placeholder="Descrição"
                     cols="80"
                     rows="3"
+                    required
                   >
                     {descricao}
                   </textArea>
@@ -130,6 +132,7 @@ class Create extends Component {
                     onChange={this.handleChange}
                     options={options}
                     name="raridade"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -143,6 +146,7 @@ class Create extends Component {
                     value={tipo}
                     onChange={this.onChange}
                     placeholder="Tipo"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -156,6 +160,7 @@ class Create extends Component {
                     value={dano}
                     onChange={this.onChange}
                     placeholder="Dano"
+                    required
                   />
                 </div>
                 <button type="submit" class="btn btn-success">
