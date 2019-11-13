@@ -153,6 +153,7 @@ class CreateMonster extends Component {
                     value={nome}
                     onChange={this.onChange}
                     placeholder="Nome"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -166,6 +167,7 @@ class CreateMonster extends Component {
                     placeholder="Descrição"
                     cols="80"
                     rows="3"
+                    required
                   >
                     {descricao}
                   </textArea>
@@ -180,6 +182,7 @@ class CreateMonster extends Component {
                     onChange={this.handleChange2}
                     options={niveis}
                     name="nivel"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -192,6 +195,7 @@ class CreateMonster extends Component {
                     onChange={this.handleChange}
                     options={options}
                     name="tamanho"
+                    required
                   />
                 </div>
           
@@ -207,6 +211,7 @@ class CreateMonster extends Component {
                     value={habilidades}
                     onChange={this.onChange}
                     placeholder="Habilidades"
+                    required
                   />
                 </div>
                 <button type="submit" class="btn btn-success">

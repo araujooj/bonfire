@@ -101,6 +101,7 @@ class Comments extends Component {
                     value={comentario}
                     onChange={this.onChange}
                     placeholder="Escreva seu comentário"
+                    required
                   />
                 </div>
 

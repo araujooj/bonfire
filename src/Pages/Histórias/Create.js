@@ -103,6 +103,7 @@ class CreateHistory extends Component {
                     value={titulo}
                     onChange={this.onChange}
                     placeholder="Titulo"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -116,6 +117,7 @@ class CreateHistory extends Component {
                     placeholder="Dê uma breve descrição sobre a sua história..."
                     cols="80"
                     rows="3"
+                    required
                   >
                     {descricao}
                   </textArea>
@@ -131,6 +133,7 @@ class CreateHistory extends Component {
                     placeholder="Escreva aqui a sua história"
                     cols="80"
                     rows="3"
+                    required
                   >
                     {conteudo}
                   </textArea>

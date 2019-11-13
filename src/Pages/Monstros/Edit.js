@@ -169,6 +169,7 @@ class EditMonster extends Component {
                     value={nome}
                     onChange={this.onChange}
                     placeholder="Nome"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -182,6 +183,7 @@ class EditMonster extends Component {
                     placeholder="Descrição"
                     cols="80"
                     rows="3"
+                    required
                   >
                     {descricao}
                   </textArea>
@@ -196,6 +198,7 @@ class EditMonster extends Component {
                     onChange={this.handleChange2}
                     options={niveis}
                     name="nivel"
+                    required
                   />
                 </div>
                 <div class="form-group">
@@ -208,6 +211,7 @@ class EditMonster extends Component {
                     onChange={this.handleChange}
                     options={options}
                     name="tamanho"
+                    required
                   />
                 </div>
              
@@ -222,6 +226,7 @@ class EditMonster extends Component {
                     value={habilidades}
                     onChange={this.onChange}
                     placeholder="Habilidades"
+                    required
                   />
                 </div>
                 <button type="submit" class="btn btn-success">
