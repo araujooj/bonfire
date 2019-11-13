@@ -17,7 +17,7 @@ class ShowMonster extends Component {
 
   componentDidMount() {
     const id = this.state.key
-    axios.get(`https://firestore.googleapis.com/v1/projects/bonfire-web/databases/(default)/documents/itens/${id}`)
+    axios.get(`https://firestore.googleapis.com/v1/projects/bonfire-web/databases/(default)/documents/monstros/${id}`)
     .then(
       res => {
         const raridade = res.data
@@ -63,7 +63,7 @@ class ShowMonster extends Component {
 
   render() {
     return (
-      <div class="app">
+      <div class="appSign">
         <LoggedHeader />
         <Container>
           <div class="panel panel-default">
@@ -85,12 +85,12 @@ class ShowMonster extends Component {
                   <h2 >Descrição:</h2>
                   <dd className="d-none d-sm-block"> <h3 >{this.state.monstro.descricao}</h3></dd>
                 </dt>
-                <dt className="d-none d-sm-block"> <h2 >Tipo:</h2></dt>
-                <dd className="d-none d-sm-block"> <h3 >{this.state.monstro.tipo}</h3></dd>
                 <dt className="d-none d-sm-block"> <h2 >Habilidades:</h2></dt>
                 <dd className="d-none d-sm-block"> <h3 >{this.state.monstro.habilidades}</h3></dd>
-                <dt className="d-none d-sm-block"> <h2 >Nivel:</h2></dt>
-                <dd className="d-none d-sm-block"> <h3 ></h3></dd>
+                <dt className="d-none d-sm-block"> <h2 >Nivel</h2></dt>
+                <dd className="d-none d-sm-block"> <h3 >2</h3></dd>
+                <dt className="d-none d-sm-block"> <h2 >Tamanho </h2></dt>
+                <dd className="d-none d-sm-block"> <h3 >Pequeno</h3></dd>
               </dl>
               <Link to={`/monstros/edit/${this.state.key}`} class="btn btn-success">
                 Editar

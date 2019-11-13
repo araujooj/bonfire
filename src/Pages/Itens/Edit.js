@@ -114,7 +114,7 @@ class Edit extends Component {
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form"
                     name="titulo"
                     value={this.state.titulo}
                     onChange={this.onChange}
@@ -128,7 +128,7 @@ class Edit extends Component {
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form"
                     name="descricao"
                     value={this.state.descricao}
                     onChange={this.onChange}
@@ -155,7 +155,7 @@ class Edit extends Component {
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form"
                     name="tipo"
                     value={this.state.tipo}
                     onChange={this.onChange}
@@ -169,7 +169,7 @@ class Edit extends Component {
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form"
                     name="dano"
                     value={this.state.dano}
                     onChange={this.onChange}

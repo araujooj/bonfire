@@ -12,7 +12,7 @@ import { Icon } from "semantic-ui-react";
 import withStyles from "@material-ui/core/styles/withStyles";
 import { Link, withRouter } from "react-router-dom";
 import { createMuiTheme } from "@material-ui/core/styles/";
-import firebase from "../../firebaseConfig";
+import firebase from "firebase";
 import Header from "../../Components/Header/header";
 import "../../assets/scss/login.scss";
 
@@ -50,7 +50,7 @@ const styles = theme => ({
   }
 });
 
-function SignIn(props) {
+function Reset(props) {
   const { classes } = props;
 
   const [email, setEmail] = useState("");
@@ -66,7 +66,7 @@ function SignIn(props) {
           <div className="squares square-4" />
         <Paper className={classes.paper}>
           <Avatar className={classes.avatar}>
-            <Icon name = 'sign in '/>
+            <Icon name = 'mail'/>
           </Avatar>
           <Typography component="h1" variant="h5">
             Entrar
@@ -86,55 +86,35 @@ function SignIn(props) {
                 onChange={e => setEmail(e.target.value)}
               />
             </FormControl>
-            <FormControl margin="normal" required fullWidth>
-              <InputLabel htmlFor="password">Senha</InputLabel>
-              <Input
-                name="password"
-                type="password"
-                id="password"
-                autoComplete="off"
-                value={password}
-                onChange={e => setPassword(e.target.value)}
-              />
-            </FormControl>
             <Button
               type="submit"
               fullWidth
               variant="contained"
               color="primary"
-              onClick={login}
+              onClick={forgotPassword}
               className={classes.submit}
             >
-              Login
-            </Button>
-            <Button
-              type="submit"
-              fullWidth
-              variant="contained"
-              color="secondary"
-              component={Link}
-              to="/cadastro"
-              className={classes.submit}
-            >
-              Cadastrar
+              Enviar
             </Button>
           </form>
           <br/>
-          <Link to ='/reset'>Esqueceu a Senha?</Link>
+          <Link to ='/login'>Voltar</Link>
         </Paper>
       </main>
       </div>
     </div>
   );
 
-  async function login() {
+  async function forgotPassword() {
     try {
-      await firebase.login(email, password);
-      props.history.replace("/dashboard");
+      await firebase.auth().sendPasswordResetEmail(email).then(function(user){
+          alert('Cheque seu email.')
+          props.history.replace('/login')
+      })
     } catch (error) {
       alert(error.message);
     }
   }
 }
 
-export default withRouter(withStyles(styles)(SignIn));
+export default withRouter(withStyles(styles)(Reset));

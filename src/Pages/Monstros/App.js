@@ -49,7 +49,7 @@ class Monstros extends Component {
 
   render() {
     return (
-      <div class="appSign">
+      <div className="appSign">
         <LoggedHeader/>
         <div class="panel panel-default">
         <Container>

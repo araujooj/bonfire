@@ -98,7 +98,7 @@ class Create extends Component {
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form"
                     name="titulo"
                     value={titulo}
                     onChange={this.onChange}
@@ -111,7 +111,7 @@ class Create extends Component {
                     <h3>Descrição</h3>
                   </label>
                   <textArea
-                    class="form-control"
+                    class="form"
                     name="descricao"
                     onChange={this.onChange}
                     placeholder="Descrição"
@@ -141,7 +141,7 @@ class Create extends Component {
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form"
                     name="tipo"
                     value={tipo}
                     onChange={this.onChange}
@@ -155,7 +155,7 @@ class Create extends Component {
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form"
                     name="dano"
                     value={dano}
                     onChange={this.onChange}

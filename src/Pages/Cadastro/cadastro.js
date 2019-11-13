@@ -56,7 +56,7 @@ function Register(props) {
   const [quote, setQuote] = useState("");
 
   return (
-    <div className="app">
+    <div className="appSign">
       <Header/>
       <div className = 'section section-typo section section-signup'>
       <main className={classes.main}>

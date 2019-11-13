@@ -24,21 +24,21 @@ class Historias extends Component {
     querySnapshot.forEach(doc => {
       const {
         nome,
+        titulo,
         descricao,
-        dano,
-        nivel,
-        alcance,
-        materialNecessario
+        conteudo,
+        curtidas,
+        comentarios
       } = doc.data();
       historias.push({
         key: doc.id,
         doc, // DocumentSnapshot
         nome,
+        titulo,
         descricao,
-        dano: dano.label,
-        nivel: nivel.label,
-        alcance,
-        materialNecessario
+        conteudo,
+        curtidas,
+        comentarios,
       });
     });
     this.setState({
@@ -83,11 +83,11 @@ class Historias extends Component {
                     <tr>
                       <td>
                         <Link to={`/historias/show/${historia.key}`}>
-                          {historia.nome}
+                          {historia.titulo}
                         </Link>
                       </td>
                       <td>{historia.descricao}</td>
-                      <td>{historia.nivel}</td>
+                      <td>{historia.nome}</td>
                     </tr>
                   ))}
                 </tbody>

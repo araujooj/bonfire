@@ -148,7 +148,7 @@ class CreateMonster extends Component {
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form"
                     name="nome"
                     value={nome}
                     onChange={this.onChange}
@@ -160,7 +160,7 @@ class CreateMonster extends Component {
                     <h3>Descrição</h3>
                   </label>
                   <textArea
-                    class="form-control"
+                    class="form"
                     name="descricao"
                     onChange={this.onChange}
                     placeholder="Descrição"
@@ -194,19 +194,7 @@ class CreateMonster extends Component {
                     name="tamanho"
                   />
                 </div>
-                <div class="form-group">
-                  <label for="author">
-                    <h3>Tipo</h3>
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="tipo"
-                    value={tipo}
-                    onChange={this.onChange}
-                    placeholder="Tipo"
-                  />
-                </div>
+          
            
                 <div class="form-group">
                   <label for="author">
@@ -214,11 +202,11 @@ class CreateMonster extends Component {
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form"
                     name="habilidades"
                     value={habilidades}
                     onChange={this.onChange}
-                    placeholder="Dano"
+                    placeholder="Habilidades"
                   />
                 </div>
                 <button type="submit" class="btn btn-success">

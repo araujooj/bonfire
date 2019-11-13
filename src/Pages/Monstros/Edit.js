@@ -134,8 +134,7 @@ class EditMonster extends Component {
       .catch(error => {
         console.error("Error adding document: ", error);
       });
-  };
-
+  }
   render() {
     const {    
       nome,
@@ -151,7 +150,7 @@ class EditMonster extends Component {
           <div class="section section-typo section section-signup">
             <div className="squares square-1" />
             <div className="squares square-2" />
-            <h1 class="h1-seo">Adicionar Monstro</h1>
+            <h1 class="h1-seo">Editar Monstro</h1>
             <div class="panel-body">
               <h4>
                 <Link to="/monstros" class="btn btn-primary">
@@ -165,7 +164,7 @@ class EditMonster extends Component {
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form"
                     name="nome"
                     value={nome}
                     onChange={this.onChange}
@@ -177,7 +176,7 @@ class EditMonster extends Component {
                     <h3>Descrição</h3>
                   </label>
                   <textArea
-                    class="form-control"
+                    class="form"
                     name="descricao"
                     onChange={this.onChange}
                     placeholder="Descrição"
@@ -211,31 +210,18 @@ class EditMonster extends Component {
                     name="tamanho"
                   />
                 </div>
-                <div class="form-group">
-                  <label for="author">
-                    <h3>Tipo</h3>
-                  </label>
-                  <input
-                    type="text"
-                    class="form-control"
-                    name="tipo"
-                    value={tipo}
-                    onChange={this.onChange}
-                    placeholder="Tipo"
-                  />
-                </div>
-           
+             
                 <div class="form-group">
                   <label for="author">
                     <h3>Habilidades</h3>
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form"
                     name="habilidades"
                     value={habilidades}
                     onChange={this.onChange}
-                    placeholder="Dano"
+                    placeholder="Habilidades"
                   />
                 </div>
                 <button type="submit" class="btn btn-success">

@@ -6,11 +6,10 @@ import LoggedHeader from "../../Components/LoggedHeader/loggedheader";
 import Select from "react-select";
 
 const options = [
-  { label: "Comum" },
-  { label: "Incomum" },
-  { label: "Raro" },
-  { label: "Muito raro" },
-  { label: "Lendário" }
+  {label: "Pessoal" },
+  {label: "Toque" },
+  {label: "Metros"},
+  {label: "Ilimitado"},
 ];
 const niveis = [
   {label: "0"},
@@ -136,7 +135,7 @@ class EditMagic extends Component {
           <div class="section section-typo section section-signup">
             <div className="squares square-1" />
             <div className="squares square-2" />
-            <h1 class="h1-seo">Adicionar magia</h1>
+            <h1 class="h1-seo">Editar magia</h1>
             <div class="panel-body form-group">
               <h4>
                 <Link to="/magias" class="btn btn-primary">
@@ -150,7 +149,7 @@ class EditMagic extends Component {
                   </label>
                   <input
                     type="text"
-                    className="form-control"
+                    className="form"
                     name="nome"
                     value={nome}
                     onChange={this.onChange}
@@ -162,7 +161,7 @@ class EditMagic extends Component {
                     <h3>Descrição</h3>
                   </label>
                   <textArea
-                    className="form-control"
+                    className="form"
                     name="descricao"
                     onChange={this.onChange}
                     placeholder="O que a magia faz"
@@ -177,7 +176,7 @@ class EditMagic extends Component {
                     <h3>Material Necessário</h3>
                   </label>
                   <textArea
-                    className="form-control"
+                    className="form"
                     name="materialNecessario"
                     onChange={this.onChange}
                     placeholder="Material necessário"
@@ -197,6 +196,7 @@ class EditMagic extends Component {
                     onChange={this.handleChange2}
                     options={niveis}
                     name="nivel"
+                    
                   />
                 </div>
                 <div class="form-group">
@@ -209,6 +209,7 @@ class EditMagic extends Component {
                     onChange={this.handleChange}
                     options={options}
                     name="alcance"
+                  
                   />
                 </div>
               
@@ -218,7 +219,7 @@ class EditMagic extends Component {
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form"
                     name="dano"
                     value={dano}
                     onChange={this.onChange}

@@ -20,6 +20,8 @@ import ShowMagic from "../Pages/Magias/Show";
 import Historias from "../Pages/Histórias/App";
 import CreateHistory from '../Pages/Histórias/Create'
 import ShowHistory from '../Pages/Histórias/Show'
+import Comments from '../Pages/Histórias/Comments'
+import Reset from '../Pages/Login/reset'
 
 const Routes = () => {
   return (
@@ -28,6 +30,7 @@ const Routes = () => {
         <Route exact path="/" component={Main} />
         <Route path="/login" component={Login} />
         <Route path="/cadastro" component={Cadastro} />
+        <Route path="/reset" component={Reset}/>
         <Route path="/dashboard" component={Dashboard} />
         <Route path="/itens" component={Itens} />
         <Route path="/itens/edit/:id" component={Edit} />
@@ -43,7 +46,8 @@ const Routes = () => {
         <Route path="/magias/show/:id" component={ShowMagic} />
         <Route path="/historias" component={Historias} />
         <Route path="/historias/create" component={CreateHistory}/>
-        <Route path="/historias/show:id" component={ShowHistory}/>
+        <Route path="/historias/show/:id" component={ShowHistory}/>
+        <Route path="/historias/comments/:id" component = {Comments}/>
       </div>
     </Router>
   );

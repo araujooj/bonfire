@@ -22,11 +22,11 @@ const niveis = [
 
 
 const options = [
-  {label: "Comum" },
-  {label: "Incomum" },
-  {label: "Raro"},
-  {label: "Muito raro"},
-  {label: "Lendário"}
+  {label: "Pessoal" },
+  {label: "Toque" },
+  {label: "Metros"},
+  {label: "Ilimitado"},
+
 ];
 
 
@@ -134,7 +134,7 @@ class CreateMagic extends Component {
                   </label>
                   <input
                     type="text"
-                    className="form-control"
+                    className="form"
                     name="nome"
                     value={nome}
                     onChange={this.onChange}
@@ -146,7 +146,7 @@ class CreateMagic extends Component {
                     <h3>Descrição</h3>
                   </label>
                   <textArea
-                    className="form-control"
+                    className="form"
                     name="descricao"
                     onChange={this.onChange}
                     placeholder="O que a magia faz"
@@ -162,7 +162,7 @@ class CreateMagic extends Component {
                   </label>
                  <input  
                  type="text"
-                    className="form-control"
+                    className="form"
                     name="materialNecessario"
                     value={materialNecessario}
                     onChange={this.onChange}
@@ -179,6 +179,7 @@ class CreateMagic extends Component {
                     onChange={this.handleChange2}
                     options={niveis}
                     name="nivel"
+                  
                   />
                 </div>
                 <div class="form-group">
@@ -191,6 +192,7 @@ class CreateMagic extends Component {
                     onChange={this.handleChange}
                     options={options}
                     name="alcance"
+                    
                   />
                 </div>
               
@@ -200,7 +202,7 @@ class CreateMagic extends Component {
                   </label>
                   <input
                     type="text"
-                    class="form-control"
+                    class="form"
                     name="dano"
                     value={dano}
                     onChange={this.onChange}
