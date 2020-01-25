@@ -104,6 +104,7 @@ class CreateHistory extends Component {
                     onChange={this.onChange}
                     placeholder="Titulo"
                     required
+                    autoComplete="off"
                   />
                 </div>
                 <div class="form-group">
@@ -118,6 +119,7 @@ class CreateHistory extends Component {
                     cols="80"
                     rows="3"
                     required
+                    autoComplete="off"
                   >
                     {descricao}
                   </textArea>
@@ -134,6 +136,7 @@ class CreateHistory extends Component {
                     cols="80"
                     rows="3"
                     required
+                    autoComplete="off"
                   >
                     {conteudo}
                   </textArea>

@@ -120,6 +120,7 @@ class Edit extends Component {
                     onChange={this.onChange}
                     placeholder="Title"
                     required
+                    autoComplete="off"
                   />
                 </div>
                 <div class="form-group">
@@ -134,6 +135,7 @@ class Edit extends Component {
                     onChange={this.onChange}
                     placeholder="Description"
                     required
+                    autoComplete="off"
                   />
                 </div>
                 <div class="form-group">
@@ -147,6 +149,7 @@ class Edit extends Component {
                     options={options}
                     name="raridade"
                     required
+                    autoComplete="off"
                   />
                 </div>
                 <div class="form-group">
@@ -161,6 +164,7 @@ class Edit extends Component {
                     onChange={this.onChange}
                     placeholder="Author"
                     required
+                    autoComplete="off"
                   />
                 </div>
                 <div class="form-group">
@@ -175,6 +179,7 @@ class Edit extends Component {
                     onChange={this.onChange}
                     placeholder="Author"
                     required
+                    autoComplete="off"
                   />
                 </div>
                 <button type="submit" class="btn btn-success">

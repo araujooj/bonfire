@@ -104,6 +104,7 @@ class Create extends Component {
                     onChange={this.onChange}
                     placeholder="Titulo"
                     required
+                    autoComplete="off"
                   />
                 </div>
                 <div class="form-group">
@@ -118,6 +119,7 @@ class Create extends Component {
                     cols="80"
                     rows="3"
                     required
+                    autoComplete="off"
                   >
                     {descricao}
                   </textArea>
@@ -133,6 +135,7 @@ class Create extends Component {
                     options={options}
                     name="raridade"
                     required
+                    autoComplete="off"
                   />
                 </div>
                 <div class="form-group">
@@ -147,6 +150,7 @@ class Create extends Component {
                     onChange={this.onChange}
                     placeholder="Tipo"
                     required
+                    autoComplete="off"
                   />
                 </div>
                 <div class="form-group">
@@ -161,6 +165,7 @@ class Create extends Component {
                     onChange={this.onChange}
                     placeholder="Dano"
                     required
+                    autoComplete="off"
                   />
                 </div>
                 <button type="submit" class="btn btn-success">

@@ -140,6 +140,7 @@ class CreateMagic extends Component {
                     onChange={this.onChange}
                     placeholder="Nome"
                     required
+                    autoComplete="off"
                   />
                 </div>
                 <div class="form-group">
@@ -153,6 +154,7 @@ class CreateMagic extends Component {
                     placeholder="O que a magia faz"
                     cols="80"
                     required
+                    autoComplete="off"
                     rows="3"
                   >
                     {descricao}
@@ -167,6 +169,7 @@ class CreateMagic extends Component {
                     className="form"
                     name="materialNecessario"
                     value={materialNecessario}
+                    autoComplete="off"
                     onChange={this.onChange}
                     placeholder="Material necessário, deixe em branco caso não necessite"></input>
                  
@@ -181,6 +184,7 @@ class CreateMagic extends Component {
                     onChange={this.handleChange2}
                     options={niveis}
                     name="nivel"
+                    autoComplete="off"
                     required
                   />
                 </div>
@@ -194,6 +198,7 @@ class CreateMagic extends Component {
                     onChange={this.handleChange}
                     options={options}
                     name="alcance"
+                    autoComplete="off"
                     required
                   />
                 </div>
@@ -208,6 +213,7 @@ class CreateMagic extends Component {
                     name="dano"
                     value={dano}
                     onChange={this.onChange}
+                    autoComplete="off"
                     placeholder="Dano"
                     required
                   />

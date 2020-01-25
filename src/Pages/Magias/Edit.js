@@ -155,6 +155,7 @@ class EditMagic extends Component {
                     onChange={this.onChange}
                     placeholder="Nome"
                     required
+                    autoComplete ="off"
                   />
                 </div>
                 <div class="form-group">
@@ -168,6 +169,7 @@ class EditMagic extends Component {
                     placeholder="O que a magia faz"
                     cols="80"
                     rows="3"
+                    autoComplete ="off"
                     required
                   >
                     {descricao}
@@ -183,6 +185,7 @@ class EditMagic extends Component {
                     onChange={this.onChange}
                     placeholder="Material necessário"
                     cols="80"
+                    autoComplete ="off"
                     rows="3"
                   >
                     {materialNecessario}
@@ -199,7 +202,7 @@ class EditMagic extends Component {
                     options={niveis}
                     name="nivel"
                     required
-                    
+                    autoComplete ="off"
                   />
                 </div>
                 <div class="form-group">
@@ -213,7 +216,7 @@ class EditMagic extends Component {
                     options={options}
                     name="alcance"
                     required
-                  
+                    autoComplete ="off"
                   />
                 </div>
               
@@ -229,6 +232,7 @@ class EditMagic extends Component {
                     onChange={this.onChange}
                     placeholder="Dano"
                     required
+                    autoComplete ="off"
                   />
                 </div>
                 <button type="submit" class="btn btn-success">
