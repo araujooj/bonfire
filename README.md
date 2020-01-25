@@ -1,68 +1,42 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h1 align="center">
+    <img alt="Bonfire" src="https://i.ibb.co/rMcrzfs/logo-foda-1.png" width="200px" />
+</h1>
 
-## Available Scripts
+<h3 align="center">
+  Bonfire
+</h3>
 
-In the project directory, you can run:
+<blockquote align="center">"Sente nessa fogueira”</blockquote>
 
-### `npm start`
+<p align="center">
+  <a href="#fire-sobre-o-projeto">Sobre o projeto</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#funcionalidades">Funcionalidades</a>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;
+  <a href="#tutorial">Tutorial</a>
+</p>
 
-Runs the app in the development mode.<br>
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+## :fire: Sobre o projeto
 
-The page will reload if you make edits.<br>
-You will also see any lint errors in the console.
+Aplicação para o trabalho de conclusão de curso do ensino médio técnico. Uma solução para receber informações e dados de RPG de mesa, construído com [React](https://pt-br.reactjs.org/) e [Firebase](https://firebase.google.com/).
 
-### `npm test`
+### Landing page
+<h1 align="center">
+    <img alt="Landing page - Bonfire" src="https://i.ibb.co/HC4rMBB/Main.png" >
+</h1>
 
-Launches the test runner in the interactive watch mode.<br>
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### Funcionalidades
 
-### `npm run build`
+- `Histórias`: Criação de histórias, visíveis para todos os usuários com a possibilidade de discussão entre os mesmos;
 
-Builds the app for production to the `build` folder.<br>
-It correctly bundles React in production mode and optimizes the build for the best performance.
+- `Itens`: Criação de itens, onde você pode deixar armazenado as informações sobre ele;
 
-The build is minified and the filenames include the hashes.<br>
-Your app is ready to be deployed!
+- `Magias`: Criação de magias, onde você pode deixar armazenado as informações sobre a magia;
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- `Monstros`: Criação de monstros, onde você pode deixar armazenado as informações sobre o monstro;
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### Tutorial: Como rodar o projeto?
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Com node e npm (ou yarn) instalado, use npm install (yarn) e depois npm start(yarn start) para iniciar.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (Webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+Feito com ♥ by araujooj :wave:
